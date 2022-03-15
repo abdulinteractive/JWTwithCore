@@ -154,3 +154,5 @@ C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Release\netcorea
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Release\netcoreapp3.1\InventoryService.dll
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Release\netcoreapp3.1\InventoryService.pdb
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Release\netcoreapp3.1\InventoryService.genruntimeconfig.cache
+C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\bin\Release\netcoreapp3.1\AutoWrapper.dll
+C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Release\netcoreapp3.1\InventoryService.MvcApplicationPartsAssemblyInfo.cs

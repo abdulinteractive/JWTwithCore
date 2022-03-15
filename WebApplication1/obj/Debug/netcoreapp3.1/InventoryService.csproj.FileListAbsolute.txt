@@ -1,7 +1,5 @@
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.AssemblyInfoInputs.cache
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.AssemblyInfo.cs
-C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.csproj.CoreCompileInputs.cache
-C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -154,3 +152,7 @@ C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.pdb
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.genruntimeconfig.cache
 C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.csprojAssemblyReference.cache
+C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.csproj.CoreCompileInputs.cache
+C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\InventoryService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Abdul\source\repos\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\AutoWrapper.dll

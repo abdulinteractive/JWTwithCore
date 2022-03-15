@@ -14,7 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
+using AutoWrapper;
+using AutoWrapper.Wrappers;
 namespace InventoryService
 {
     public class Startup
@@ -54,7 +55,8 @@ namespace InventoryService
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            //app.UseApiResponseAndExceptionWrapper(new ApiResponseOptions { ApiVersion = "2.0" });
+            //app.UseApiResponseAndExceptionWrapper();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

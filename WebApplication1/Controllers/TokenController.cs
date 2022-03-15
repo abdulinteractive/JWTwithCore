@@ -1,4 +1,6 @@
-﻿using InventoryService.Models;
+﻿using InventoryService.Filters;
+using InventoryService.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +27,7 @@ namespace InventoryService.Controllers
         }
 
         [HttpPost]
+        [ActionFilterAttribute]
         public async Task<IActionResult> Post(UserInfo _userData)
         {
 
@@ -50,26 +53,26 @@ namespace InventoryService.Controllers
 
                     var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-                    var ctoken = new JwtSecurityToken(_configuration["Jwt:Issuer"], 
-                        _configuration["Jwt:Audience"], 
-                        claims, 
-                        expires: DateTime.UtcNow.AddHours(1), 
+                    var ctoken = new JwtSecurityToken(_configuration["Jwt:Issuer"],
+                        _configuration["Jwt:Audience"],
+                        claims,
+                        expires: DateTime.UtcNow.AddHours(1),
                         signingCredentials: signIn);
                     var token = new JwtSecurityTokenHandler().WriteToken(ctoken);
-                    return Ok(new { status=true,
-                    user.FirstName,
-                    user.LastName,user.Email,token
-                    });
+                    user.Password = "";
+                    user.Token = token;
+                    return Ok(user);
                 }
                 else
                 {
-                    return BadRequest("Invalid credentials");
+                    return BadRequest($"Please check your credential and enter valid username and password.");
                 }
             }
             else
             {
-                return BadRequest();
+                return BadRequest($"Please check your credential and enter valid username and password.");
             }
+
         }
 
         private async Task<UserInfo> GetUser(string email, string password)

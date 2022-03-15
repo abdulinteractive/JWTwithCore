@@ -7,12 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using InventoryService.Models;
 using Microsoft.AspNetCore.Authorization;
+using InventoryService.Filters;
 
 namespace InventoryService.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
+    [ActionFilterAttribute]
     public class ProductsController : ControllerBase
     {
         private readonly InventoryContext _context;
@@ -24,10 +26,11 @@ namespace InventoryService.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Products>>> GetProducts(bool? inStock, int? skip, int? take)
+        //[ActionFilterAttribute]
+        public async Task<IActionResult> GetProducts(bool? inStock, int? skip, int? take)
         {
             var products = _context.Products.AsQueryable();
-
+            //return BadRequest("Please provide user name and password");
             if (inStock != null) // Adds the condition to check availability 
             {
                 products = _context.Products.Where(i => i.AvailableQuantity > 0);
@@ -42,8 +45,7 @@ namespace InventoryService.Controllers
             {
                 products = products.Take((int)take);
             }
-
-            return await products.ToListAsync();
+            return Ok(await products.ToListAsync());
         }
         // GET: api/Products/5
         [HttpGet("{id}")]
@@ -53,10 +55,10 @@ namespace InventoryService.Controllers
 
             if (products == null)
             {
-                return NotFound();
+                return NotFound("Product not found");
             }
 
-            return products;
+            return Ok(products);
         }
 
         // PUT: api/Products/5
